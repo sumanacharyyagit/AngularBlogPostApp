@@ -1,0 +1,108 @@
+{
+  "postCardsArr": [
+    {
+      "id": "20210001",
+      "img": "https://source.unsplash.com//1920x1080/?nature,night",
+      "place": "India",
+      "title": "Nature",
+      "date": "Nov 12",
+      "description": "1This is a wider card with supporting text below as a natural lead-in to additional content."
+    },
+    {
+      "img": "https://source.unsplash.com//1920x1080/?technology,night",
+      "place": "india",
+      "title": "Technology",
+      "date": "Nov 12",
+      "description": "2This is a wider card with supporting text below as a natural lead-in to additional content.",
+      "id": 20210002
+    },
+    {
+      "img": "https://source.unsplash.com//1920x1080/?india,city",
+      "place": "india",
+      "title": "City",
+      "date": "Nov 12",
+      "description": "3This is a wider card with supporting text below as a natural lead-in to additional content.",
+      "id": 20210003
+    },
+    {
+      "img": "https://source.unsplash.com//1920x1080/?cars,city",
+      "place": "india",
+      "title": "Cars",
+      "date": "Nov 12",
+      "description": "4This is a wider card with supporting text below as a natural lead-in to additional content.",
+      "id": 20210004
+    },
+    {
+      "img": "https://source.unsplash.com//1920x1080/?city,tree",
+      "place": "india",
+      "title": "City",
+      "date": "Nov 12",
+      "description": "5This is a wider card with supporting text below as a natural lead-in to additional content. This is a wider card with supporting text below as a natural lead-in to additional content. This is a wider card with supporting text below as a natural lead-in to additional content.",
+      "id": 20210005
+    },
+    {
+      "img": "https://source.unsplash.com//1920x1080/?urban,night",
+      "place": "world",
+      "title": "Urban",
+      "date": "Nov 12",
+      "description": "6This is a wider card with supporting text below as a natural lead-in to additional content.",
+      "id": 20210006
+    },
+    {
+      "img": "https://source.unsplash.com//1920x1080/?village,day",
+      "place": "world",
+      "title": "Village",
+      "date": "Nov 12",
+      "description": "7This is a wider card with supporting text below as a natural lead-in to additional content.",
+      "id": 20210007
+    },
+    {
+      "img": "https://source.unsplash.com//1920x1080/?village,mountain",
+      "place": "india",
+      "title": "Village",
+      "date": "Nov 12",
+      "description": "8This is a wider card with supporting text below as a natural lead-in to additional content.",
+      "id": 20210008
+    },
+    {
+      "id": 20210009,
+      "img": "https://source.unsplash.com//1920x1080/?village,night",
+      "place": "India",
+      "title": "Village",
+      "date": "Nov 12",
+      "description": "9This is a wider card with supporting text below as a natural lead-in to additional content."
+    },
+    {
+      "img": "https://source.unsplash.com//1920x1080/?village,urban",
+      "place": "world",
+      "title": "Village",
+      "date": "Nov 12",
+      "description": "10This is a wider card with supporting text below as a natural lead-in to additional content.",
+      "id": 20210010
+    },
+    {
+      "img": "https://source.unsplash.com//1920x1080/?sky,night",
+      "place": "india",
+      "title": "Sky",
+      "date": "Nov 12",
+      "description": "11This is a wider card with supporting text below as a natural lead-in to additional content. This is a wider card with supporting text below as a natural lead-in to additional content.",
+      "id": 20210011
+    },
+    {
+      "img": "https://source.unsplash.com//1920x1080/?village,night",
+      "place": "india",
+      "title": "Village",
+      "date": "Nov 12",
+      "description": "12This is a wider card with supporting text below as a natural lead-in to additional content.",
+      "id": 20210012
+    },
+    {
+      "img": "https://source.unsplash.com//1920x1080/?hill,day",
+      "place": "world",
+      "title": "Hill",
+      "date": "Nov 12",
+      "description": "13This is a wider card with supporting text below as a natural lead-in to additional content. This is a wider card with supporting text below as a natural lead-in to additional content. This is a wider card with supporting text below as a natural lead-in to additional content.",
+      "id": 20210013
+    }
+  ]
+}

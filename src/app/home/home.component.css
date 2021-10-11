@@ -1,0 +1,24 @@
+.bg-image {
+  background-color: rgba(200, 200, 200, 0.7);
+}
+
+.div-1 {
+  background-color: #ffffff;
+}
+
+hr {
+  border: 2px solid black;
+  width: 100%;
+}
+
+.myparagraph {
+  width: 900px;
+  height: 280px;
+
+}
+
+/* .paraEllipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+} */

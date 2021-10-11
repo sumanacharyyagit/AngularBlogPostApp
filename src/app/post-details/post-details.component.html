@@ -1,0 +1,121 @@
+<!-- <p>post-details works!</p> -->
+
+
+<div class="container bg-image my-5 rounded-3 p-3 shadow">
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <strong><h2 class="fw-light">Post Details</h2></strong>
+            </div>
+        </div>
+        <hr class="featurette-divider">
+    
+
+        <!-- Alert notifications -->
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+            </symbol>
+            <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+            </symbol>
+            <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </symbol>
+        </svg>
+
+        <!-- Post updated alert -->
+        <div *ngIf="alertMsg" class="alert alert-success mx-5 d-flex align-items-center alert-dismissible fade show" role="alert">
+            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+            <div>
+            <strong>Congratulations!</strong> Successfully updated your post.
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </section>
+
+    <div class="container my-3">
+        <div class="row featurette d-flex flex-md-row-reverse justify-content-center align-items-center mx-3 my-3">
+            <div class="col-md-6 mb-5">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto rounded-end" width="100%" height="350" [src]="displayPost.img" alt="Image" aria-label="Placeholder: 500x500">
+            </div>
+            <div class="col-md-6 px-5">
+                <div class="d-flex justify-content-between align-items-center">
+                    <strong class="d-inline-block mb-2 text-primary" >{{displayPost.place}}</strong>
+                    <small class="text-muted">{{displayPost.date}}</small>
+                </div>
+                <br>
+                <h2 class="featurette-heading text-black">{{displayPost.title}}</h2>
+                <br>
+                <p class="lead text-black-50">{{displayPost.description}}</p>
+            </div>
+            <hr class="featurette-divider mt-4">
+            <br>
+            <div class="btn-group justify-content-center" role="group" aria-label="Basic example">
+                <button type="button" class="btn-lg btn-secondary" style="width: 15rem" (click)="goToPostsFromDetails()"><i class="fas fa-chevron-left"></i><i class="fas fa-chevron-left"></i>&nbsp; Back to All Posts</button>
+                <button type="button" class="btn-lg btn-secondary" style="width: 10rem" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-pen"></i>&nbsp; Edit Post</button>
+            </div>
+        </div>
+        <br>
+
+    </div>
+</div>
+
+<!-- Modal: Edit Post -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLabel">Edit Post</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+
+            <!-- <form [formGroup]="reactiveFormEdit" (ngSubmit)="reactiveFormUpdateSubmitted()"> -->
+            <form [formGroup]="reactiveFormEdit" (ngSubmit)="reactiveFormUpdateSubmitted()">
+              <div class="modal-body p-5">
+
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Change Image Link:</label>
+                    <input type="text" class="form-control" id="imageLink" placeholder="source.unsplash.com/1600x900/?nature,water" name="imageLink" formControlName="img">
+                </div>
+                <label for="exampleFormControlInput1" class="form-label">Change Place:</label>
+                <select class="form-select" aria-label="Default select example" id="place" name="place" formControlName="place">
+                    <option selected>Select</option>
+                    <option value="india">India</option>
+                    <option value="world">World</option>
+                </select>
+                <br>
+                
+                <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Change Post Title:</label>
+                    <input type="text" class="form-control" id="postTitle" placeholder="Nature" name="postTitle" formControlName="title" >
+                    <p class="float-end"><span id="countTitle"></span>Max Length: 20</p>
+                    <!-- <span *ngIf="reactiveForm.get('title').touched && reactiveForm.get('title').hasError('required')">Enter Value</span> -->
+                    <!-- <span *ngIf="reactiveForm.get('title').touched && reactiveForm.get('title').hasError('maxLength')">Length is exceed than 20</span> -->
+                    
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Change Description:</label>
+                    <textarea class="form-control" id="postDescription" name="postDescription" rows="5" formControlName="description" (keypress)="chkDescLen()"></textarea>
+                    <p class="float-end"><span Lendesc></span>Max Length: 1000</p>
+                      <!-- <span *ngIf="reactiveForm.get('description').touched && reactiveForm.get('description').hasError('required')">Enter Value</span> -->
+                      <!-- <span *ngIf="reactiveForm.get('description').touched && reactiveForm.get('description').hasError('maxLength')">Length is exceed than 1000</span> -->
+                  </div>
+                  <br>
+
+                  <div class="modal-footer py-3">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" [disabled]="!reactiveFormEdit.valid">Submit</button>
+                  </div>
+                  
+              </div>
+            </form>
+
+            
+        </div>
+    </div>
+</div>
+
+
